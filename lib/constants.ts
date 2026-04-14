@@ -95,6 +95,9 @@ export const SERVICES = [
 ] as const;
 
 // ─── Projects ─────────────────────────────────────────────────────────────────
+export const PROJECT_CATEGORIES = ["All", "Web", "Mobile", "Design"] as const;
+export type ProjectCategory = (typeof PROJECT_CATEGORIES)[number];
+
 export const PROJECTS = [
   {
     title: "Modern E-commerce Platform",
@@ -102,9 +105,10 @@ export const PROJECTS = [
       "A full-featured e-commerce solution with payment integration and admin dashboard.",
     tags: ["React", "Node.js", "MongoDB", "Stripe"],
     image:
-      "https://images.unsplash.com/photo-1567016544554-1e9c8b1a7c8b?w=800&q=80",
-    category: "Web",
+      "https://images.unsplash.com/photo-1658297063569-162817482fb6?w=800&q=80",
+    category: "Web" as const,
     caseStudyUrl: "#",
+    githubUrl: "#",
   },
   {
     title: "Portfolio Website Design",
@@ -113,8 +117,52 @@ export const PROJECTS = [
     tags: ["Next.js", "Tailwind", "Framer Motion"],
     image:
       "https://images.unsplash.com/photo-1750056393300-102f7c4b8bc2?w=800&q=80",
-    category: "Design",
+    category: "Design" as const,
     caseStudyUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    title: "Mobile Banking App UI",
+    description:
+      "Intuitive mobile banking interface with seamless user experience.",
+    tags: ["React Native", "Firebase", "UI/UX"],
+    image:
+      "https://images.unsplash.com/photo-1605108222700-0d605d9ebafe?w=800&q=80",
+    category: "Mobile" as const,
+    caseStudyUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    title: "Corporate Website",
+    description: "Professional corporate website with CMS integration.",
+    tags: ["WordPress", "PHP", "MySQL"],
+    image:
+      "https://images.unsplash.com/photo-1616418534243-ab757ff8ce3a?w=800&q=80",
+    category: "Web" as const,
+    caseStudyUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    title: "Social Media Dashboard",
+    description:
+      "Analytics dashboard for managing multiple social media accounts.",
+    tags: ["Vue.js", "Express", "Chart.js"],
+    image:
+      "https://images.unsplash.com/photo-1566915896913-549d796d2166?w=800&q=80",
+    category: "Web" as const,
+    caseStudyUrl: "#",
+    githubUrl: "#",
+  },
+  {
+    title: "Fitness App Design",
+    description:
+      "Modern fitness tracking app with workout plans and nutrition guides.",
+    tags: ["Figma", "UI/UX", "Prototyping"],
+    image:
+      "https://images.unsplash.com/photo-1649451844813-3130d6f42f8a?w=800&q=80",
+    category: "Design" as const,
+    caseStudyUrl: "#",
+    githubUrl: "#",
   },
 ] as const;
 
