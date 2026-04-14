@@ -1,34 +1,45 @@
-# Project Context: Portfolio Web Developer
+# Portfolio Project
 
-## Technology Stack
+## Tech Stack
 
-- **Framework:** Next.js 16.2+ (App Router)
-- **Library:** React 19.2+
-- **Styling:** Tailwind CSS v4 (Dark Mode by default)
-- **UI Components:** shadcn/ui (Radix UI)
-- **Animations:** Framer Motion
-- **Icons:** Lucide React
+- Next.js 16 (App Router)
+- TypeScript strict mode
+- Tailwind CSS
+- Framer Motion
+- Lucide React
 
-## Design System & Styling Rules (Tailwind v4)
+## Design Reference
 
-- **Configuration:** This project uses Tailwind CSS v4. Do NOT create or look for `tailwind.config.ts`. All custom themes and CSS variables must be defined in the main CSS file (e.g., `app/globals.css`) using the `@theme` directive.
-- **Background:** Primary background color `#0A0A0A`, Card/Surface color `#111111`.
-- **Primary Accent:** Neon Green `#00FF66` (used for buttons, progress bars, glowing effects, and highlights).
-- **Text:** White/Off-white for readability.
+- Style: Dark Minimalist with Green Accent
+- Background: #0a0a0a
+- Surface/Card: #111111
+- Border: #1a1a1a / #333333
+- Text primary: #ffffff
+- Text secondary: #888888
+- Accent color: #00ff88 (green)
+- Font: Inter
 
-## Coding Standards & Preferences
+## Data Source
 
-- **React 19 & Next 16:** Utilize React 19 features (e.g., proper ref handling without `forwardRef` if applicable, new hooks) and ensure compatibility with Next.js 16 App Router paradigms.
-- **Shadcn/UI:** Always check if a component can be built using shadcn/ui primitives first (e.g., Button, Card, Progress, Input). Note that some shadcn CLI setups might need manual adjustment to work flawlessly with Tailwind v4's CSS structure.
-- **Framer Motion:** Use `motion` components for scroll reveals, hover effects, and entrance animations. Prefer subtle fade-ins and scale-ups. Always wrap shadcn/ui components inside `<motion.div>` rather than trying to animate the UI components directly.
-- **TypeScript:** Strict typing. Use interfaces defined in `src/data/` (e.g., `skills.ts`).
-- **Project Structure:**
-  - `src/components/`: Functional components (Hero, About, etc.)
-  - `src/data/`: Static data files (projects.ts, skills.ts)
-  - `src/lib/`: Utility functions (cn helper)
+All content/data is in /lib/constants.ts — always import from there, never hardcode.
 
-## Specific Feature Rules
+## Folder Structure
 
-- **Skills Section:** Map data from `src/data/skills.ts`. Use shadcn `Progress` bars with custom neon green styling.
-- **Projects Section:** Display exactly 2 recent projects. No filtering logic needed. Use shadcn `Card` and Framer Motion for hover states.
-- **Responsive:** Mobile-first approach. All sections must be responsive.
+/app → layout.tsx, page.tsx, globals.css
+/components/sections → one file per section
+/components/ui → reusable small components
+/lib → constants.ts
+/public/images → all images
+
+## Code Rules
+
+- Tailwind only, no inline styles
+- Framer Motion for all animations
+- whileInView + viewport={{ once: true }} for scroll animations
+- Import data from /lib/constants.ts
+- TypeScript strict, no "any"
+- Mobile first
+
+## Sections Order (match page.tsx)
+
+Hero → About → Skills → Services → Projects → Testimonials → Blog → Contact → Footer
