@@ -16,7 +16,6 @@ export default function Home() {
         <Projects />
         <Experience />
         <Contact />
-        {/* More sections will be added here */}
       </main>
       <Footer />
     </>
