@@ -1,9 +1,16 @@
 // ─── Personal Information ────────────────────────────────────────────────────
 export const PERSONAL_INFO = {
-  name: "John Doe",
-  title: "Web Developer & UI/UX Designer",
+  name: "Duc Ngo",
+  title: "Web Developer",
   bio: "I craft beautiful, functional web experiences that solve real problems. Specialized in modern web technologies and creating seamless user interfaces.",
-  email: "john.doe@example.com",
+  aboutBio: [
+    "With over 5 years of experience in web development, I specialize in creating modern, responsive, and user-friendly websites. My expertise spans across front-end and back-end technologies, enabling me to deliver complete web solutions.",
+    "I'm passionate about clean code, elegant design, and crafting digital experiences that make a difference. Whether it's a complex web application or a simple landing page, I bring creativity and technical excellence to every project.",
+    "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or mentoring aspiring developers. I believe in continuous learning and staying updated with the latest industry trends.",
+  ],
+  avatar:
+    "https://images.unsplash.com/photo-1728577740843-5f29c7586afe?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  email: "duc.ngo@example.com",
   phone: "+1 (555) 123-4567",
   location: "San Francisco, CA",
   cvUrl: "/cv.pdf",
@@ -104,7 +111,7 @@ export const PROJECTS = [
       "A full-featured e-commerce solution with payment integration and admin dashboard.",
     tags: ["React", "Node.js", "MongoDB", "Stripe"],
     image:
-      "https://images.unsplash.com/photo-1658297063569-162817482fb6?w=800&q=80",
+      "https://images.unsplash.com/photo-1567016544554-1e9c8b1a7c8b?w=800&q=80",
     category: "Web",
     caseStudyUrl: "#",
   },
