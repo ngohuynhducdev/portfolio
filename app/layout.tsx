@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "John Doe — Web Developer & UI/UX Designer",
+  title: "Duc Ngo — Web Developer",
   description:
-    "Portfolio of John Doe — crafting beautiful, functional web experiences with React, Next.js, and modern tooling.",
+    "Portfolio of Duc Ngo — crafting beautiful, functional web experiences with React, Next.js, and modern tooling.",
 };
 
 export default function RootLayout({

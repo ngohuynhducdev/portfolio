@@ -77,7 +77,7 @@ const SOCIALS = [
   { icon: GithubIcon, label: "GitHub", href: "https://github.com" },
   { icon: LinkedinIcon, label: "LinkedIn", href: "https://linkedin.com" },
   { icon: TwitterIcon, label: "Twitter", href: "https://twitter.com" },
-  { icon: MailIcon, label: "Email", href: "mailto:john.doe@example.com" },
+  { icon: MailIcon, label: "Email", href: "mailto:ducngo.doe@example.com" },
 ];
 
 export default function Footer() {
@@ -174,7 +174,7 @@ export default function Footer() {
             <span className="text-primary" aria-label="love">
               ♥
             </span>{" "}
-            by John Doe
+            by Duc Ngo
           </span>
         </div>
       </div>
