@@ -1,3 +1,14 @@
+// ─── Navigation Links ─────────────────────────────────────────────────────────
+export const NAV_LINKS = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Services", href: "#services" },
+  { label: "Projects", href: "#projects" },
+  { label: "Blog", href: "#blog" },
+  { label: "Contact", href: "#contact" },
+] as const;
+
 // ─── Personal Information ────────────────────────────────────────────────────
 export const PERSONAL_INFO = {
   name: "Duc Ngo",
