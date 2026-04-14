@@ -105,6 +105,50 @@ export const SERVICES = [
   },
 ] as const;
 
+// ─── Experience ───────────────────────────────────────────────────────────────
+export const EXPERIENCE = [
+  {
+    role: "Senior Frontend Developer",
+    company: "Vercel Inc.",
+    location: "San Francisco, CA",
+    period: "2023 — Present",
+    current: true,
+    description:
+      "Lead development of customer-facing dashboards used by 200k+ users. Architect component libraries with React and TypeScript, driving a 40% reduction in UI inconsistencies.",
+    highlights: ["React", "TypeScript", "Next.js", "Tailwind CSS"],
+  },
+  {
+    role: "Frontend Developer",
+    company: "Shopify",
+    location: "Remote",
+    period: "2021 — 2023",
+    current: false,
+    description:
+      "Built and maintained high-traffic merchant storefronts. Collaborated with design and backend teams to ship features on time across a large-scale monorepo.",
+    highlights: ["React", "GraphQL", "Node.js", "Figma"],
+  },
+  {
+    role: "UI/UX Developer",
+    company: "Freelance",
+    location: "Ho Chi Minh City, VN",
+    period: "2020 — 2021",
+    current: false,
+    description:
+      "Designed and developed websites for 20+ clients across e-commerce, healthcare, and SaaS verticals. Responsible for full project lifecycle from wireframe to deployment.",
+    highlights: ["HTML/CSS", "JavaScript", "WordPress", "Figma"],
+  },
+  {
+    role: "Junior Web Developer",
+    company: "FPT Software",
+    location: "Ha Noi, VN",
+    period: "2019 — 2020",
+    current: false,
+    description:
+      "Contributed to enterprise Angular applications for Japanese clients. Wrote unit tests and participated in agile sprint ceremonies.",
+    highlights: ["Angular", "TypeScript", "SCSS", "Jest"],
+  },
+] as const;
+
 // ─── Projects ─────────────────────────────────────────────────────────────────
 export const PROJECT_CATEGORIES = ["All", "Web", "Mobile", "Design"] as const;
 export type ProjectCategory = (typeof PROJECT_CATEGORIES)[number];
