@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { PERSONAL_INFO, STATS, TECH_STACK } from "@/lib/constants";
+import { EASE } from "@/lib/animation";
 
 // ─── Inline SVG social icons (lucide-react removed brand icons) ──────────────
 function GithubIcon() {
@@ -107,7 +108,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.55, ease: EASE },
   },
 };
 
@@ -254,7 +255,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, delay: 0.3, ease: EASE }}
             className="hidden lg:flex items-center justify-center"
           >
             <div className="relative w-full max-w-md aspect-square">
@@ -331,7 +332,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, delay: 0.7, ease: EASE }}
           className="mt-20 grid grid-cols-3 gap-4 sm:gap-8 max-w-lg"
         >
           {STATS.map(({ value, suffix, label }) => (

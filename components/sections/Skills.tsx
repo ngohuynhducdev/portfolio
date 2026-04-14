@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { SKILLS } from "@/lib/constants";
+import { EASE } from "@/lib/animation";
 import SectionWrapper from "@/src/components/SectionWrapper";
 
 // ─── Category icons (inline SVG) ─────────────────────────────────────────────
@@ -60,7 +61,7 @@ function CategoryCard({
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.6, delay, ease: EASE }}
       className="flex flex-col gap-5 rounded-xl border bg-card p-6"
       style={{ borderColor: "#1a1a1a" }}
     >
@@ -131,7 +132,7 @@ export default function Skills() {
             transition={{
               duration: 0.5,
               delay: 0.25,
-              ease: [0.22, 1, 0.36, 1],
+              ease: EASE,
             }}
             className="h-1 w-16 rounded-full bg-primary origin-left"
           />

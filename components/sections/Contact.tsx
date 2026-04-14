@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { PERSONAL_INFO } from "@/lib/constants";
 import SectionWrapper from "@/src/components/SectionWrapper";
+import { EASE } from "@/lib/animation";
 
 // ─── Social icon SVGs (same as Footer) ───────────────────────────────────────
 function GithubIcon() {
@@ -104,7 +105,7 @@ const slideLeft = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.65, ease: EASE },
   },
 };
 
@@ -113,7 +114,7 @@ const slideRight = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.65, ease: EASE },
   },
 };
 
@@ -167,7 +168,7 @@ export default function Contact() {
             transition={{
               duration: 0.5,
               delay: 0.25,
-              ease: [0.22, 1, 0.36, 1],
+              ease: EASE,
             }}
             className="h-1 w-16 rounded-full bg-primary origin-left"
           />

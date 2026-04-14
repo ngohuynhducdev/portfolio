@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { PERSONAL_INFO, STATS } from "@/lib/constants";
 import SectionWrapper from "@/src/components/SectionWrapper";
+import { EASE } from "@/lib/animation";
 
 // ─── Framer Motion variants ──────────────────────────────────────────────────
 const leftVariants = {
@@ -12,7 +12,7 @@ const leftVariants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.7, ease: EASE },
   },
 };
 
@@ -21,7 +21,7 @@ const rightVariants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.7, ease: EASE },
   },
 };
 
@@ -37,7 +37,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.5, ease: EASE },
   },
 };
 
@@ -160,14 +160,13 @@ export default function About() {
 
               {/* Download CV */}
               <motion.div variants={itemVariants}>
-                <Button
-                  asChild
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-6 shadow-[0_0_20px_rgba(0,255,102,0.3)] hover:shadow-[0_0_30px_rgba(0,255,102,0.5)] transition-shadow"
+                <a
+                  href={PERSONAL_INFO.cvUrl}
+                  download
+                  className="inline-flex items-center justify-center rounded-lg text-sm font-semibold px-6 h-9 bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(0,255,102,0.3)] hover:shadow-[0_0_30px_rgba(0,255,102,0.5)] transition-shadow"
                 >
-                  <a href={PERSONAL_INFO.cvUrl} download>
-                    Download CV
-                  </a>
-                </Button>
+                  Download CV
+                </a>
               </motion.div>
             </motion.div>
           </motion.div>

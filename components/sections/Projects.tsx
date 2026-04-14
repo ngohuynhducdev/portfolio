@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { PROJECTS } from "@/lib/constants";
+import { EASE } from "@/lib/animation";
 import SectionWrapper from "@/src/components/SectionWrapper";
 
 // ─── GitHub SVG icon ─────────────────────────────────────────────────────────
@@ -30,7 +31,7 @@ function ProjectCard({ project }: { project: Project }) {
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.5, ease: EASE }}
       className="group relative rounded-xl overflow-hidden border border-border bg-card flex flex-col"
     >
       {/* Image */}
@@ -132,7 +133,7 @@ export default function Projects() {
             transition={{
               duration: 0.5,
               delay: 0.25,
-              ease: [0.22, 1, 0.36, 1],
+              ease: EASE,
             }}
             className="h-1 w-16 rounded-full bg-primary origin-left"
           />
@@ -149,7 +150,7 @@ export default function Projects() {
               transition={{
                 duration: 0.5,
                 delay: i * 0.12,
-                ease: [0.22, 1, 0.36, 1],
+                ease: EASE,
               }}
             >
               <ProjectCard project={project} />

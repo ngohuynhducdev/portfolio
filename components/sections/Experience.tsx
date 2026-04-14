@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { MapPin, CalendarDays, Briefcase } from "lucide-react";
 import { EXPERIENCE } from "@/lib/constants";
+import { EASE } from "@/lib/animation";
 import SectionWrapper from "@/src/components/SectionWrapper";
 
 export default function Experience() {
@@ -39,7 +40,7 @@ export default function Experience() {
             transition={{
               duration: 0.5,
               delay: 0.25,
-              ease: [0.22, 1, 0.36, 1],
+              ease: EASE,
             }}
             className="h-1 w-16 rounded-full bg-primary origin-left"
           />
@@ -72,7 +73,7 @@ export default function Experience() {
                 transition={{
                   duration: 0.6,
                   delay: i * 0.1,
-                  ease: [0.22, 1, 0.36, 1],
+                  ease: EASE,
                 }}
                 className="relative pb-10 last:pb-0 pl-8 md:pl-0 md:grid md:grid-cols-2"
               >
